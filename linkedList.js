@@ -7,19 +7,15 @@
 function linkedListGenerator(){
   var listOfNodes = {};
   var node = {};
-
+  var head = null;
+  var tail = null;
 
   function getHead(){
-    for (i= 0; i< list; i++){
-      if ("something"){
-        var head = " value of something";
-        return head;
-      }
-    }
+   return head;
   }
 
-  function getTail(list){
-    console.log("still building");
+  function getTail(){
+   return tail;
   }
 
   function add(Value){
