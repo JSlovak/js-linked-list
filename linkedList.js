@@ -58,8 +58,30 @@ function linkedListGenerator(){
       }
   }
 
-  function remove(Number){
+  function remove(number){
+    var target = get(number);
+    var prevNode = get((number-1));
+    var nextNode = get((number+1));
 
+    if (target === false){
+      return false;
+    }
+
+    if (target === tail) {
+      tail = prevNode;
+      prevNode.next = null;
+    }
+
+    if (target === head){
+      head = nextNode;
+      target = null;
+    } else {
+
+      prevNode.next = nextNode;
+    }
+    console.log(target);
+    console.log(prevNode);
+    console.log(nextNode);
   }
 
   function insert(Value, Number) {
