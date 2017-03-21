@@ -5,11 +5,11 @@
  */
 
 function linkedListGenerator(){
+
   var listOfNodes = {};
   var node = {};
   var head = null;
   var tail = null;
-
 
 
   function getHead(){
@@ -27,16 +27,20 @@ function linkedListGenerator(){
         value: value,
         next: null,
       };
+
       head = tail;
       return tail;
 
     } else {
+
       tail.next = {
         value: value,
         next: null
       };
+
       tail = tail.next;
     }
+
     return tail;
   }
 
@@ -46,16 +50,16 @@ function linkedListGenerator(){
     for (var i = 0; i < number; i++){
       if (currNode === null){
         return false;
-      }
-        currNode = currNode.next;
+      } currNode = currNode.next;
     }
 
     if (currNode === null){
       return false;
 
     } else {
+
         return currNode;
-      }
+    }
   }
 
   function remove(number){
@@ -79,9 +83,6 @@ function linkedListGenerator(){
 
       prevNode.next = nextNode;
     }
-    console.log(target);
-    console.log(prevNode);
-    console.log(nextNode);
   }
 
   function insert(value, number) {
@@ -104,10 +105,6 @@ function linkedListGenerator(){
         newNode.next = nextNode;
         prevNode.next = newNode;
     }
-
-
-
-    console.log(prevNode);
   }
 
   return {
