@@ -10,6 +10,8 @@ function linkedListGenerator(){
   var head = null;
   var tail = null;
 
+
+
   function getHead(){
    return head;
   }
@@ -18,9 +20,27 @@ function linkedListGenerator(){
    return tail;
   }
 
-  function add(Value){
+  function add(value){
+    if (head === null){
 
+      tail = {
+        value: value,
+        next: null,
+      };
+
+      head = tail;
+
+    } else {
+      tail.next = {
+        value: value,
+        next: null
+      };
+      tail = tail.next;
+    }
+    return tail;
   }
+
+
 
   function get(Number){
 
@@ -45,6 +65,5 @@ function linkedListGenerator(){
   };
 
 }
-
 
 
