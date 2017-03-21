@@ -27,8 +27,8 @@ function linkedListGenerator(){
         value: value,
         next: null,
       };
-
       head = tail;
+      return tail;
 
     } else {
       tail.next = {
@@ -40,10 +40,22 @@ function linkedListGenerator(){
     return tail;
   }
 
+  function get(number){
+    var currNode = head;
 
+    for (var i = 0; i < number; i++){
+      if (currNode === null){
+        return false;
+      }
+        currNode = currNode.next;
+    }
 
-  function get(Number){
+    if (currNode === null){
+      return false;
 
+    } else {
+        return currNode;
+      }
   }
 
   function remove(Number){
