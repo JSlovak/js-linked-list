@@ -84,8 +84,30 @@ function linkedListGenerator(){
     console.log(nextNode);
   }
 
-  function insert(Value, Number) {
+  function insert(value, number) {
+    var newNode = {
+      value:value,
+      next: null
+    };
+    var prevNode = get((number-1));
+    var nextNode = get(number);
 
+    if (get(number) === false || number < 0){
+      return false;
+    }
+
+    if (number === 0){
+      newNode.next = nextNode;
+      head = newNode;
+
+    } else {
+        newNode.next = nextNode;
+        prevNode.next = newNode;
+    }
+
+
+
+    console.log(prevNode);
   }
 
   return {
